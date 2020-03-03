@@ -1,0 +1,37 @@
+link: https://docs.google.com/presentation/d/1HmiVlFRP5R6Dxi0g8y-gsTLcuW6upeia8OiVNbOMhDM/edit#slide=id.p
+
+REST API - Auth
+
+Buatlah model User yang menyimpan minimal email dan password dan tambahkan endpoint baru untuk Register dan Login (boleh juga Signup atau Signin ^^).
+
+POST /register
+Request body: { email, password }
+Response:
+201: { id, email, password }
+400: { errors }
+POST /login
+Request body: { email, password }
+Response:
+200: { accessToken }
+400: { errors }
+Setelah membuat 2 endpoint di atas, tambahkan association ke Todo. Kamu akan membuat 1 User has many Todo. Kemudian, tambahkan middleware untuk melakukan authentication dan authorization dengan skema sebagai berikut:
+
+User bisa create todo jika memberikan accessToken dan accessToken tersebut sudah terverifikasi. (Authentication)
+User hanya bisa melihat, mengubah dan menghapus todonya sendiri. (Authorization)
+Note: Untuk mengirim accessToken, gunakan request header (diterima sebagai req.headers di Express).
+
+
+link: https://docs.google.com/presentation/d/15T8M4BfwLMCmLeYbMui5yRYTml5RrZ89DLDoCC0sEWY/edit#slide=id.g4c2b53cf0c_0_97
+
+Fancy Todo!
+
+Tambahkan fitur pada API Todo kamu yang mengimplementasikan 3rd party API. Buatlah fitur se-kreatif mungkin dan yang relevan untuk API kamu, misalkan integrasi dengan Google Calendar, kirim reminder email, dll.
+
+FAQ:
+
+3rd party API yang ga relevan gimana yaa contohnya?
+Misalkan setelah create todo, kamu kasih tambahan response klasemen liga Inggris. Ga nyambung bos 🙄.
+
+
+reference: https://rapidapi.com/?utm_source=mashape&utm_medium=301
+https://github.com/public-apis/public-apis
