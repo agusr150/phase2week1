@@ -1,0 +1,114 @@
+Project
+Fancy Todo
+
+Buatlah aplikasi Todo menggunakan Client-server model dengan spesifikasi sebagai berikut:
+
+API Documentation yang meliputi : URLs, HTTP method, request, response (success dan error case)
+Membuat routes sesuai standar REST API
+CRUD endpoints untuk Todo, minimal ada:
+title
+description
+status
+due_date
+Register
+Login menggunakan email & password
+Membuat authorization sehingga user hanya bisa melakukan CRUD terhadap todo-nya sendiri
+Make it fancy! Tambahkan 1 fitur atau lebih menggunakan 3rd party API apapun yang akan menjadikan aplikasi todo kamu menjadi unik dan berbeda dari aplikasi todo biasa. Misal, integrasikan dengan Google Calendar.
+Social Login (Google/Twitter/Facebook/GitHub)
+NO alert(); please!
+Rocket 🚀
+
+Challengenya masih kurang? Coba kerjain ini!
+
+Authenticated user bisa membuat project dan invite/add member ke project tersebut.
+Todo yang ada di suatu project hanya bisa di read/write (CRUD) oleh project members.
+Kompetensi Backend
+
+REST API
+API Documentation
+Auth
+PostgreSQL + Sequelize
+
+
+link : https://docs.google.com/presentation/d/10uhvcWvtFLFfM4OPTSVxB-ag6uXseTj8GJ0LB502sR8/edit#slide=id.g45b6da3ca8_2_5
+
+REST API
+
+Buatlah REST API dengan Express dan Sequelize yang memiliki fungsi sebagai berikut:
+
+Membuat todo (Create todo)
+Mengambil semua data todo (Read todo)
+Mengambil detail todo berdasarkan ID (Get todo by ID)
+Mengubah data todo (Update todo)
+Menghapus data todo (Delete todo)
+Kamu bisa test REST API yang sedang kamu develop menggunakan tools seperti Postman, Insomnia atau curl. Jika masih belum mengerti tentang konsep REST API, bisa baca dulu REST API Tutorial atau discuss dengan instruktur yaa!
+
+Berikut routes/endpoint yang harus kalian buat:
+
+POST /todos
+Endpoint ini akan menerima request body:
+title
+description
+status
+due_date
+Jika request berhasil, kembalikan response dengan 201 status code dan response body berupa object yang berisikan data baru yang berhasil di-input.
+Jika request gagal karena validasi tidak terpenuhi, kembalikan response dengan 400 status code dan response body berupa object yang berisikan validation errors.
+Jika request gagal karena kesalahan server, kembalikan response dengan 500 status code.
+GET /todos
+Jika request berhasil, kembalikan response dengan 200 status code dan response body berupa array of objects yang berisikan semua data todo.
+Jika request gagal, kembalikan response dengan 500 status code.
+GET /todos/:id
+Jika request berhasil, kembalikan response dengan 200 status code dan response body berupa object yang berisikan data todo.
+Jika request gagal karena todo tidak ditemukan, kembalikan response dengan 404 status code dan response body berupa object yang berisikan error not found.
+PUT /todos/:id
+Endpoint ini akan menerima request body:
+title
+description
+status
+due_date
+Jika request berhasil, kembalikan response dengan 200 status code dan response body berupa object yang berisikan data baru yang berhasil di-update.
+Jika request gagal karena validasi tidak terpenuhi, kembalikan response dengan 400 status code dan response body berupa object yang berisikan validation errors.
+Jika request gagal karena todo tidak ditemukan, kembalikan response dengan 404 status code dan response body berupa object yang berisikan error not found.
+Jika request gagal karena kesalahan server, kembalikan response dengan 500 status code.
+DELETE /todos/:id
+Jika request berhasil, kembalikan response dengan 200 status code dan response berupa object yang berisikan data yang berhasil di-delete.
+Jika request gagal karena todo tidak ditemukan, kembalikan response dengan 404 status code dan response body berupa object yang berisikan error not found
+Jika request gagal karena kesalahan server, kembalikan response dengan 500 status code.
+
+
+REST API Documentation
+
+Buatlah dokumentasi untuk REST API yang sebelumnya kamu buat, boleh dalam format apapun. Informasi yang harus ada:
+
+Route apa saja yang ada di REST API kamu
+Apa yang diperlukan saat pengguna ingin mengirim request (seperti body, header, parameter, dll)
+Response yang akan didapatkan oleh pengguna.
+Contoh:
+
+POST /todos
+
+Request header:
+
+{
+  "Content-Type": "application/json"
+}
+Request body:
+
+{
+  "title": "Learn REST API",
+  "description": "Learn how to create RESTful API with Express and Sequelize",
+  "due_date": "2020-01-29"
+}
+Response:
+
+{
+  "id": 1,
+  "title": "Learn REST API",
+  "description": "Learn how to create RESTful API with Express and Sequelize",
+  "due_date": "2020-01-29"
+}
+
+
+reference: https://restapitutorial.com/
+reference: https://en.wikipedia.org/wiki/Client%E2%80%93server_model
+
