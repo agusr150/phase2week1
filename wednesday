@@ -16,3 +16,18 @@ https://devdocs.io/jquery/
 https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
 https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage
 https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies
+
+
+link: https://docs.google.com/presentation/d/1kb4tD5CucY_12ZJCiFnoO6D0_-c7w38ktcEtSuHelPA/edit#slide=id.p
+
+
+Fancy Todo Social Login
+
+Tambahkan fitur social login pada aplikasi Fancy Todo kamu.
+
+reference:
+https://aaronparecki.com/oauth-2-simplified/
+https://developers.google.com/identity/sign-in/web/sign-in
+https://developer.github.com/apps/building-oauth-apps/
+https://developer.twitter.com/en/docs/basics/authentication/overview
+https://developers.facebook.com/docs/facebook-login/
